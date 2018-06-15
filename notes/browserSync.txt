@@ -1,0 +1,6 @@
+Browsersync is a node module that allows you to sync your code up with the browser.
+
+this automatically injects and html or css changes you make to your code into the browser
+
+It also spins up a web server that can be used on any browser by copying the external address.
+
