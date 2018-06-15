@@ -1,9 +1,11 @@
 NOTE: ONLY WORKS IF FOLLOWING THE BEM PHILOSOPHY
 
 - In postcss, the parent selector or the root block selector can be replaced with an & 
-when applying it to a child element selector
+when applying it to a child element selector that has the root selectors name in its name
 
-- We can then NEST the ampersand in the root selector
+- We can then NEST the ampersand with the child's name appended to it in the root selector
+
+- This compiles to descendant selectors once postcss processes it.
 
 EXAMPLE:
 
@@ -30,6 +32,19 @@ We can do this:
     {
         color: blue
     }    
+}
+
+which compiles back to this:
+
+
+.baseHeader
+{
+    color: red;
+}
+
+.baseHeader__subtitle
+{
+    color: blue;
 }
 
 

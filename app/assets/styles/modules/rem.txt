@@ -1,0 +1,10 @@
+What is rem?
+-> a unit size that is relative to the root of the page
+-> most browsers have a base font size of 16 pixels
+-> so that equals 1rem
+-> 1.5rem = 24px
+-> etc.
+
+Why use rem?
+-> Not everyone has their browser configured the same way
+-> Our website will scale to the user's font-size preference
