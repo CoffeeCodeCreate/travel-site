@@ -3,6 +3,10 @@ var gulp = require('gulp'); //the gulp package
 var watch = require('gulp-watch'); 
 //CSS Preprocessor
 var postcss = require('gulp-postcss');
+//auto prefixer for css
+var autoprefixer = require('autoprefixer');
+//postcss module allowing us to use variables in css
+var cssvars = require('postcss-simple-vars');
 
 
 //default gulp tasks, runs by just typing gulp into the terminal
@@ -17,7 +21,7 @@ gulp.task('html', function(){
 
 gulp.task('styles', function(){
 	return gulp.src("./app/assets/styles/styles.css")
-		.pipe()
+		.pipe(postcss([cssvars,autoprefixer]))
 		.pipe(gulp.dest('./app/temp/styles'))
 
 });
