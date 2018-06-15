@@ -1,12 +1,14 @@
 var gulp = require('gulp'); //the gulp package
 //gulp-watch package, runs functions when it senses file changes.
 var watch = require('gulp-watch'); 
-//CSS Preprocessor
+//CSS Preprocessor -> postCSS
 var postcss = require('gulp-postcss');
 //auto prefixer for css
 var autoprefixer = require('autoprefixer');
 //postcss module allowing us to use variables in css
 var cssvars = require('postcss-simple-vars');
+//allows us to nest our css
+var nested = require('postcss-nested');
 
 
 //default gulp tasks, runs by just typing gulp into the terminal
@@ -21,7 +23,7 @@ gulp.task('html', function(){
 
 gulp.task('styles', function(){
 	return gulp.src("./app/assets/styles/styles.css")
-		.pipe(postcss([cssvars,autoprefixer]))
+		.pipe(postcss([nested,cssvars,autoprefixer]))
 		.pipe(gulp.dest('./app/temp/styles'))
 
 });
