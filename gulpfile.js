@@ -1,6 +1,8 @@
 var gulp = require('gulp'); //the gulp package
 //gulp-watch package, runs functions when it senses file changes.
 var watch = require('gulp-watch'); 
+//CSS Preprocessor
+var postcss = require('gulp-postcss');
 
 
 //default gulp tasks, runs by just typing gulp into the terminal
