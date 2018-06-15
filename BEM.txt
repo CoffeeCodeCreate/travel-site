@@ -1,0 +1,27 @@
+What BEM stands for:
+
+Block -> independant reusable part of our design
+example: headerSection
+
+Element -> belongs to a block. cannot be used outside that block.
+example: headerSection_title, headerSection_subtitle
+
+
+Modifier -> can be used on a block or an element to indicate a change to the default state 
+            of an object
+
+example: headerSection_title--orange
+
+
+BEM Overview:
+
+- CSS Selectors should target elements with classes rather than type, descendent and cascade
+    selectors.
+
+- We limit the cascade, allowing us to move blocks around and reuse them around the page
+
+- blocks can be nested inside other blocks
+
+- we can identify patterns and then create single responsibility blocks or a block that does ONE job
+
+- bem makes the relationship between HTML and CSS clear.

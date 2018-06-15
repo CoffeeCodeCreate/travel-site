@@ -9,6 +9,8 @@ var autoprefixer = require('autoprefixer');
 var cssvars = require('postcss-simple-vars');
 //allows us to nest our css
 var nested = require('postcss-nested');
+//allows us to import multiple css files to then compile it into one
+var cssImport = require('postcss-import');
 
 
 //default gulp tasks, runs by just typing gulp into the terminal
@@ -23,7 +25,7 @@ gulp.task('html', function(){
 
 gulp.task('styles', function(){
 	return gulp.src("./app/assets/styles/styles.css")
-		.pipe(postcss([nested,cssvars,autoprefixer]))
+		.pipe(postcss([cssImport,nested,cssvars,autoprefixer]))
 		.pipe(gulp.dest('./app/temp/styles'))
 
 });

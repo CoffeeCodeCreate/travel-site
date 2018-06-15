@@ -1,0 +1,35 @@
+NOTE: ONLY WORKS IF FOLLOWING THE BEM PHILOSOPHY
+
+- In postcss, the parent selector or the root block selector can be replaced with an & 
+when applying it to a child element selector
+
+- We can then NEST the ampersand in the root selector
+
+EXAMPLE:
+
+Instead of:
+
+.baseHeader
+{
+    color: red;
+}
+
+.baseHeader__subtitle
+{
+    color: blue;
+}
+
+We can do this:
+
+.baseHeader
+{ 
+    color: red 
+
+    //child element
+    &__subtitle
+    {
+        color: blue
+    }    
+}
+
+

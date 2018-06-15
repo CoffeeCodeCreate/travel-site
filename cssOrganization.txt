@@ -1,0 +1,19 @@
+We can use multiple css files that compile to one main css file
+
+    Why do this? -> It becomes a lot easier to read and manipulate styles.
+
+How can we do this?
+
+We use the npm module: postcss-import 
+
+We can use the keyword '@import "filePathToFile" ' in our main css file, at the very top.
+
+    -> NOTE: this file is NOT the one in the temp folder thats the finished,
+            compiled verson!
+            Also: We do NOT need to include the extension .css
+
+NOTE FOR NORMALIZE.CSS AND POSTCSS IMPORT:
+
+-> If you have normalize.css as a dependancy you can import it through postcss-import
+   by simply writing " @import "normalize.css" " without having to navigate to the node_modules
+    folder!
